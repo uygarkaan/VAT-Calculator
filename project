@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class VATCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter the product price
+        System.out.print("Enter the product price: ");
+        double price = scanner.nextDouble();
+
+        // Prompt the user to enter the VAT rate (as a percentage)
+        System.out.print("Enter the VAT rate (as a percentage): ");
+        double vatRate = scanner.nextDouble();
+
+        // Calculate the VAT amount
+        double vatAmount = (price * vatRate) / 100;
+
+        // Calculate the total price including VAT
+        double totalPrice = price + vatAmount;
+
+        // Display the results
+        System.out.println("VAT amount: " + vatAmount + " USD");
+        System.out.println("Total price including VAT: " + totalPrice + " USD");
+
+        scanner.close();
+    }
+}
